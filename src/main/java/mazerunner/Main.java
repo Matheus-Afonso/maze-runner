@@ -2,6 +2,7 @@ package mazerunner;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /* Projeto Maze Runner do Hyperskill
@@ -73,7 +74,15 @@ public class Main {
 	public static Maze generate() {
 		// Desenhar um labirinto quadrado
 		System.out.print("Tamanho do labirinto (minimo: 5): ");
-		int size = sc.nextInt();
+		int size;
+		
+		try {
+			size = sc.nextInt();
+		} catch (InputMismatchException e) {
+			sc.nextLine(); // Limpa o buffer do scanner
+			System.out.println("ERRO: Número inválido!");
+			return null;
+		}
 		
 		if (size <= 4) {
 			System.out.println("ERRO: O labirinto deve possuir tamanho minimo 5.");

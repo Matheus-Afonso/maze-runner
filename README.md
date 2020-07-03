@@ -4,7 +4,9 @@ O labirinto deve ter tamanho mínimo de 5x5 blocos. Código feito inteiramente e
  
 Feito de acordo com o projeto [Maze Runner](https://hyperskill.org/projects/47) do Hyperskill.
 
-[front](/images/front.jpg)
+<p align="center">
+  <img src="/images/front.JPG" />
+</p>
 
 ## Instruções
 
@@ -35,9 +37,11 @@ Número | Nome | Oculto | Descrição
 ### Gerar Labirinto
 Após escolher a primeira opção, o programa espera o usuário digitar o tamanho do labirinto NxN, sendo obrigatório receber apenas um número e maior e igual a 5.
 O labirinto é gerado usando o [algoritmo de busca de profundidade](https://pt.qwe.wiki/wiki/Maze_generation_algorithm#Depth-first_search) e o resultado final
-é mostrado no console. O labirinto representa paredes como blocos duplos (*\u2588\u2588*) e espaços livres como dois espaços em branco.
+é mostrado no console. O labirinto representa paredes como blocos duplos (██ - *\u2588\u2588*) e espaços livres como dois espaços em branco.
 
-[maze](/images/maze.jpg)
+<p align="center">
+  <img src="/images/maze.JPG" />
+</p>
 
 ### Importar Labirinto
 Ao escolher a segunda opção o programa aguarda o usuário digitar o nome do arquivo .txt que possui o labirinto, com extensão. Mesmo após importar com sucesso,
@@ -52,4 +56,6 @@ Ao selecionar essa opção, o programa aguarda o usuário digitar o nome do arqu
 Ao escolher a quinta opção, o programa calcula o caminho mais curto entre a entrada e saída e o mostra no console. Exemplo de labirinto após escolher a 
 quinta opção:
 
-[solved](/images/solved.jpg)
+<p align="center">
+  <img src="/images/solved.JPG" />
+</p>

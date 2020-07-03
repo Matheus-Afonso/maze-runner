@@ -20,7 +20,6 @@ import java.util.Scanner;
  	* 5. Find the escape: Mostra o caminho mais rápido de sair do labirinto. Marcado por //
  	* 0. Exit.
  * */
-
 public class Main {
 	
 	private static final Scanner sc = new Scanner(System.in);

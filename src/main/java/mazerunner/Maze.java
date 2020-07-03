@@ -18,7 +18,7 @@ public class Maze {
 	private int largura;
 	private int alturaCell;
 	private int larguraCell;
-	private String[][] mazeGrid;	// Cada celula fica com o nome de um número
+	private String[][] mazeGrid;	
 	private Cell[][] cellGrid;
 	
 	// Constantes
@@ -45,7 +45,7 @@ public class Maze {
 		
 		try (BufferedReader readMaze = new BufferedReader(existingMaze)) {
 			String line = readMaze.readLine();
-			// Conta a quantidade de linhas e colunas. Cada elemento consite de 2 caracteres
+			// Conta a quantidade de linhas e colunas. Cada elemento consiste de 2 caracteres
 			qtdColumns = line.length()/2;
 			qtdLines = 0;
 			
@@ -183,8 +183,8 @@ public class Maze {
 		}
 	}
 	
+	// Substitui as partes nulas que sobraram por parede
 	private void drawRemainingWalls() {
-		// Substitui as partes nulas que sobraram por parede
 		for (int i = 0; i < altura; i++) {
 			for (int j = 0; j < largura; j++) {
 				if (mazeGrid[i][j] == null) {
@@ -207,7 +207,7 @@ public class Maze {
 		}
 		mazeGrid[2*randomExit + 1][mazeGrid[0].length - 1] = FREE;
 		
-		// Melhora a saída para o caso de tamanho par. Adiciona mais um espaço em branco
+		// Ajusta a saída para o caso de tamanho par. Adiciona mais um espaço em branco
 		if (largura % 2 == 0) {
 			mazeGrid[2*randomExit + 1][mazeGrid[0].length - 2] = FREE;
 		}
@@ -232,7 +232,7 @@ public class Maze {
 		}
 	}
  	
-	// Métodos para salvar o labirinto em um arquivo
+	// Métodos para carregar ou salvar o labirinto em um arquivo
 	private void importMazeToGrid(String mazeString) {
 		// Popula o maze grid de acordo com o arquivo pego pelo construtor
 		String[] lines = mazeString.split("#");

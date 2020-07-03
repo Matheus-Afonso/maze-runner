@@ -9,6 +9,7 @@ public class Cell {
 	private final int x;
 	private final int y;
 	private boolean visited;
+	
 	// Responsável por saber quais são as células vizinhas
 	private final List<Cell> neighbors;
 	
@@ -43,7 +44,6 @@ public class Cell {
 		}
 	}
 	
-	// Para MazeSolver
 	public void addNeighbor(List<Cell> neighbours) {
 		neighbours.forEach(this::addNeighbor);
 	}
@@ -64,7 +64,7 @@ public class Cell {
 				.anyMatch(c -> c.getX() == this.x - 1 && c.getY() == this.y);
 	}
 	
-	// Usado para MazeSolver
+	// Usado apenas para MazeSolver
 	public boolean hasLeftCellNeighbor() {
 		return neighbors.stream()
 				.anyMatch(c -> c.getX() == this.x && c.getY() == this.y - 1);
